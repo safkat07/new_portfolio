@@ -10,8 +10,8 @@ const MainLayout = () => {
             <Navbar />
             <Banner />
             <Skills />
-            <About />
             <Works />
+            <About />
         </div>
     )
 }

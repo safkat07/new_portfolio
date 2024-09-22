@@ -38,7 +38,7 @@ const Navbar = () => {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <div className="fixed pt-5 inset-x-0 text-neutral-400 backdrop-blur-3xl">
+        <div className="fixed pt-5 inset-x-0 z-20 text-neutral-400 backdrop-blur-3xl">
             <MaxWidthContainer>
                 <nav className="flex justify-between items-center">
                     <h1 className="sm:text-4xl text-3xl font-semibold">safkat.dev</h1>
