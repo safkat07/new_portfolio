@@ -20,7 +20,7 @@ const Sidebar = ({ isOpen, onClose }) => (
             <IoMdCloseCircle />
         </button>
         <ul className="flex flex-col space-y-5 list-none">
-            {["Home", "Works", "Skills", "About"].map((item) => (
+            {["Home", "Skills", "Works", "About"].map((item) => (
                 <MenuItem key={item} label={item} onClick={onClose} />
             ))}
         </ul>
@@ -44,7 +44,7 @@ const Navbar = () => {
                     <h1 className="sm:text-4xl text-3xl font-semibold">safkat.dev</h1>
 
                     <div className="hidden lg:flex gap-x-7 list-none items-center">
-                        {["Home", "Works", "Skills", "About"].map((item) => (
+                        {["Home", "Skills", "Works", "About"].map((item) => (
                             <MenuItem key={item} label={item} onClick={closeMenu} />
                         ))}
                     </div>

@@ -52,7 +52,7 @@ const TechStack = () => {
 // Banner Component
 const Banner = () => {
     return (
-        <div className="bg-gradient-to-br from-black/85 via-gray-900 to-gray-800 h-screen flex justify-center items-center">
+        <div className=" h-screen flex justify-center items-center">
             <div className='flex flex-col justify-center items-center text-center'>
                 <img src={meImg} alt="Safkat Sharif Sadli" />
                 <h1 className='text-neutral-400 uppercase tracking-widest text-5xl font-semibold'>
