@@ -57,7 +57,7 @@ export const Carousel = ({
 
     const handleCardClose = (index) => {
         if (carouselRef.current) {
-            const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
+            const cardWidth = isMobile() ? 230 : 384;
             const gap = isMobile() ? 4 : 8;
             const scrollPosition = (cardWidth + gap) * (index + 1);
             carouselRef.current.scrollTo({
@@ -202,7 +202,7 @@ export const Card = ({
                             </motion.p>
                             <div className="py-10">{card.content}</div>
                             <div className="flex justify-center gap-x-5 items-center">
-                                <img src={card.src} alt="" />
+                                {/* <img src={card.src} alt="" /> */}
                                 <a target="_blank" href={card.liveLink}>Go Live</a>
                                 <a target="_blank" href={card.githubLink}>Check Code</a>
                             </div>

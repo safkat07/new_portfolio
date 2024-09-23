@@ -40,7 +40,7 @@ const Skills = () => {
     const currentSkills = skillsData[activeTab];
 
     return (
-        <div className='py-20 text-neutral-400'>
+        <div id='skills' className='py-20 text-neutral-400'>
             <MaxWidthContainer>
                 <h1 className='text-4xl mb-8'>Technical Skills</h1>
                 <div className='flex space-x-4 sm:justify-start justify-center items-center w-full mb-6'>

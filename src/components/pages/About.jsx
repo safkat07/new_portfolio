@@ -34,7 +34,7 @@ const About = () => {
     ];
 
     return (
-        <section className=" text-neutral-400">
+        <section id='about' className=" text-neutral-400">
             <MaxWidthContainer>
                 <div className="text-start mb-12">
                     <h2 className="text-4xl md:text-5xl text-white font-bold">About Me</h2>

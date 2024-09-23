@@ -4,9 +4,9 @@ import MaxWidthContainer from "@/components/shared/MaxWidthContainer";
 import { CiMenuFries } from "react-icons/ci";
 import { IoMdCloseCircle } from "react-icons/io";
 
-const MenuItem = ({ label, onClick }) => (
+const MenuItem = ({ label, href, onClick }) => (
     <li>
-        <a href="#" onClick={onClick} className="text-lg text-white hover:underline">
+        <a href={href} onClick={onClick} className="text-lg text-white hover:underline">
             {label}
         </a>
     </li>
@@ -20,8 +20,13 @@ const Sidebar = ({ isOpen, onClose }) => (
             <IoMdCloseCircle />
         </button>
         <ul className="flex flex-col space-y-5 list-none">
-            {["Home", "Skills", "Works", "About"].map((item) => (
-                <MenuItem key={item} label={item} onClick={onClose} />
+            {[
+                { label: "Home", href: "/" },
+                { label: "Skills", href: "/skills" },
+                { label: "Works", href: "/works" },
+                { label: "About", href: "/about" }
+            ].map((item) => (
+                <MenuItem key={item.label} label={item.label} href={item.href} onClick={onClose} />
             ))}
         </ul>
         <div className="mt-5 flex flex-col">
@@ -44,14 +49,23 @@ const Navbar = () => {
                     <h1 className="sm:text-4xl text-3xl font-semibold">safkat.dev</h1>
 
                     <div className="hidden lg:flex gap-x-7 list-none items-center">
-                        {["Home", "Skills", "Works", "About"].map((item) => (
-                            <MenuItem key={item} label={item} onClick={closeMenu} />
+                        {[
+                            { label: "Home", href: "#" },
+                            { label: "Skills", href: "#skills" },
+                            { label: "Works", href: "#works" },
+                            { label: "About", href: "#about" }
+                        ].map((item) => (
+                            <MenuItem key={item.label} label={item.label} href={item.href} onClick={closeMenu} />
                         ))}
                     </div>
 
                     <div className="hidden lg:flex space-x-2">
-                        <Buttons className="bg-transparent text-gray-300 border-gray-500 border hover:bg-gray-700 hover:text-white transition duration-300" btnText="Contact" />
-                        <Buttons className="bg-gray-700 text-white hover:bg-blue-700 transition duration-300" btnText="Resume" />
+                        <a href="#contact">
+                            <Buttons className="bg-transparent text-gray-300 border-gray-500 border hover:bg-gray-700 hover:text-white transition duration-300" btnText="Contact" />
+                        </a>
+                        <a href="/src/assets/Safkat Sharif Sadli Resume.docx.pdf" download='Safkat.frontend.pdf'>
+                            <Buttons className="bg-gray-700 text-white hover:bg-blue-700 transition duration-300" btnText="Resume" />
+                        </a>
                     </div>
 
                     <button onClick={toggleMenu} className="lg:hidden text-2xl cursor-pointer">

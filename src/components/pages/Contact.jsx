@@ -35,7 +35,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="py-16">
+        <div id='contact' className="py-16">
             <MaxWidthContainer>
                 <h2 className="text-4xl md:text-5xl text-white font-bold text-end mb-8">Contact Me</h2>
                 <div className="max-w-lg mx-auto p-8 rounded-lg shadow-xl backdrop-blur-2xl">
