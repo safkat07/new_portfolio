@@ -45,7 +45,7 @@ const Works = () => {
     return (
         <div className='h-screen text-4xl text-neutral-400'>
             <MaxWidthContainer className={'my-10'}>
-                <h2 className='text-end mb-10'>My Works</h2>
+                <h2 className="text-4xl text-end md:text-5xl font-bold text-white">About Me</h2>
                 <Carousel items={items.map(item => <Card key={item.title} card={item} layout={true} />)} />
             </MaxWidthContainer>
         </div>

@@ -232,7 +232,7 @@ export const Card = ({
                     src={card?.src}
                     alt={card.title}
 
-                    className=" absolute " />
+                    className=" absolute  mx-auto inset-0" />
             </motion.button>
         </>
     );
