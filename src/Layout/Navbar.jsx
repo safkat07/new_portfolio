@@ -21,17 +21,21 @@ const Sidebar = ({ isOpen, onClose }) => (
         </button>
         <ul className="flex flex-col space-y-5 list-none">
             {[
-                { label: "Home", href: "/" },
-                { label: "Skills", href: "/skills" },
-                { label: "Works", href: "/works" },
-                { label: "About", href: "/about" }
+                { label: "Home", href: "#" },
+                { label: "Skills", href: "#skills" },
+                { label: "Works", href: "#works" },
+                { label: "About", href: "#about" }
             ].map((item) => (
                 <MenuItem key={item.label} label={item.label} href={item.href} onClick={onClose} />
             ))}
         </ul>
-        <div className="mt-5 flex flex-col">
-            <Buttons className="bg-transparent text-gray-300 border-gray-500 border hover:bg-gray-700 hover:text-white transition duration-300" btnText="Contact" />
-            <Buttons className="bg-gray-700 mt-3 text-white hover:bg-blue-700 transition duration-300" btnText="Resume" />
+        <div className="mt-5 w-full flex flex-col gap-2.5">
+            <a onClick={onClose} className="w-full" href="#contact">
+                <Buttons className="bg-transparent w-full text-gray-300 border-gray-500 border hover:bg-gray-700 hover:text-white transition duration-300" btnText="Contact" />
+            </a>
+            <a onClick={onClose} className="w-full" href="/src/assets/Safkat Sharif Sadli Resume.docx.pdf" download='Safkat.frontend.pdf'>
+                <Buttons className="bg-gray-700 w-full text-white hover:bg-blue-700 transition duration-300" btnText="Resume" />
+            </a>
         </div>
     </div>
 );
