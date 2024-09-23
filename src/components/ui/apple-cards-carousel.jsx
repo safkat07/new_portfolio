@@ -201,6 +201,11 @@ export const Card = ({
                                 {card.title}
                             </motion.p>
                             <div className="py-10">{card.content}</div>
+                            <div className="flex justify-center gap-x-5 items-center">
+                                <img src={card.src} alt="" />
+                                <a target="_blank" href={card.liveLink}>Go Live</a>
+                                <a target="_blank" href={card.githubLink}>Check Code</a>
+                            </div>
                         </motion.div>
                     </div>
                 )}
@@ -210,7 +215,7 @@ export const Card = ({
                 onClick={handleOpen}
                 className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[50%] w-56 md:h-[30rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10">
                 <div
-                    className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
+                    className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/90 via-transparent to-transparent z-30 pointer-events-none" />
                 <div className="relative z-40 p-8">
                     <motion.p
                         layoutId={layout ? `category-${card.category}` : undefined}
@@ -224,10 +229,10 @@ export const Card = ({
                     </motion.p>
                 </div>
                 <BlurImage
-                    src={card.src}
+                    src={card?.src}
                     alt={card.title}
-                    
-                    className="  " />
+
+                    className=" absolute " />
             </motion.button>
         </>
     );
