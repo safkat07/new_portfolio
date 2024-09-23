@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import About from '@/components/pages/About'
 import Works from '@/components/pages/Works'
 
+import Contact from '@/components/pages/Contact'
 const MainLayout = () => {
     return (
         <div>
@@ -12,6 +13,7 @@ const MainLayout = () => {
             <Skills />
             <Works />
             <About />
+            <Contact />
         </div>
     )
 }

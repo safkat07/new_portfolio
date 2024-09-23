@@ -34,16 +34,16 @@ const About = () => {
     ];
 
     return (
-        <section className="py-20 text-neutral-100">
+        <section className=" text-neutral-400">
             <MaxWidthContainer>
                 <div className="text-start mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold">About Me</h2>
+                    <h2 className="text-4xl md:text-5xl text-white font-bold">About Me</h2>
                     <p className="mt-4 text-lg text-neutral-400">
                         A quick snapshot of who I am and what I do.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Render Cards Using Data */}
                     {aboutData.map((item, index) => (
                         <AboutCard
