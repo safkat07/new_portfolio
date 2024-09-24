@@ -1,6 +1,11 @@
 import meImg from '../assets/Me.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiLeetcode, SiJavascript, SiReact, SiNodedotjs, SiMongodb } from 'react-icons/si';
+import { SiMinutemailer } from "react-icons/si";
+
+
+
+
 
 // Social Icons Component
 const Social = () => {
@@ -55,13 +60,14 @@ const Banner = () => {
         <div className=" h-screen flex justify-center items-center">
             <div className='flex flex-col justify-center items-center text-center'>
                 <img src={meImg} alt="Safkat Sharif Sadli" />
-                <h1 className='text-neutral-400 uppercase tracking-widest text-5xl font-semibold'>
+                <h1 className='text-neutral-400 uppercase tracking-widest md:text-5xl text-3xl font-semibold'>
                     Safkat Sharif <span className='font-bold text-indigo-400'>Sadli</span>
                 </h1>
                 <p className='mt-4 lg:max-w-2xl max-w-xl  text-lg text-gray-300 leading-6'>
                     A passionate tech enthusiast with a love for solving complex problems and transforming ideas into real-world solutions.
                     With a focus on creating impactful and innovative projects.
                 </p>
+                <p className='flex flex-row-reverse justify-center items-center gap-x-2 text-xl my-2 text-neutral-300'><span><SiMinutemailer /></span><span>safkatsadli@gmail.com</span></p>
                 <Social />
                 {/* <TechStack /> */}
             </div>
