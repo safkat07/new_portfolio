@@ -3,6 +3,7 @@ import { Buttons } from "@/components/shared/Buttons";
 import MaxWidthContainer from "@/components/shared/MaxWidthContainer";
 import { CiMenuFries } from "react-icons/ci";
 import { IoMdCloseCircle } from "react-icons/io";
+import resume from '../assets/Safkat_Sharif_Sadli_Resume.docx.pdf'
 
 const MenuItem = ({ label, href, onClick }) => (
     <li>
@@ -33,7 +34,7 @@ const Sidebar = ({ isOpen, onClose }) => (
             <a onClick={onClose} className="w-full" href="#contact">
                 <Buttons className="bg-transparent w-full text-gray-300 border-gray-500 border hover:bg-gray-700 hover:text-white transition duration-300" btnText="Contact" />
             </a>
-            <a onClick={onClose} className="w-full" href="/src/assets/Safkat Sharif Sadli Resume.docx.pdf" download='Safkat.frontend.pdf'>
+            <a onClick={onClose} className="w-full" href={resume} download='Safkat.frontend.pdf'>
                 <Buttons className="bg-gray-700 w-full text-white hover:bg-blue-700 transition duration-300" btnText="Resume" />
             </a>
         </div>
@@ -67,7 +68,7 @@ const Navbar = () => {
                         <a href="#contact">
                             <Buttons className="bg-transparent text-gray-300 border-gray-500 border hover:bg-gray-700 hover:text-white transition duration-300" btnText="Contact" />
                         </a>
-                        <a href="/src/assets/Safkat Sharif Sadli Resume.docx.pdf" download='Safkat.frontend.pdf'>
+                        <a href={resume} download='Safkat.frontend.pdf'>
                             <Buttons className="bg-gray-700 text-white hover:bg-blue-700 transition duration-300" btnText="Resume" />
                         </a>
                     </div>
